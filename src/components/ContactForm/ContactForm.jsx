@@ -19,8 +19,8 @@ const ContactForm = () => {
         .required("Required"),
       number: Yup.string()
         .matches(
-          /^\d{3}-\d{2}-\d{2}$/,
-          "Phone number must be in xxx-xx-xx format"
+          /^\d{3}-\d{3}-\d{4}$/,
+          "Phone number must be in xxx-xxx-xxxx format"
         )
         .required("Required"),
     }),
@@ -54,7 +54,7 @@ const ContactForm = () => {
         id="number"
         name="number"
         type="text"
-        placeholder="xxx-xx-xx"
+        placeholder="xxx-xxx-xxxx"
         {...formik.getFieldProps("number")}
       />
       {formik.touched.number && formik.errors.number ? (

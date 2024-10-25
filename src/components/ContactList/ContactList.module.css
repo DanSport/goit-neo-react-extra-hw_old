@@ -1,0 +1,52 @@
+.contactList {
+    display: flex;
+    flex-wrap: wrap; /* Дозволяє переносити елементи на новий рядок */
+    gap: 20px; /* Відступ між елементами */
+    list-style: none; /* Прибирає стандартні стилі списку */
+    padding: 0; /* Видалення стандартного відступу */
+    margin: 0 auto; /* Центрування списку */
+    justify-content: center; /* Центрування елементів у рядку */
+}
+
+.contactItem {
+    flex: 1 1 calc(25% - 20px); /* Робимо ширину кожної картки приблизно 25% від контейнера з урахуванням відступів */
+    box-sizing: border-box; /* Включає padding і border у ширину */
+    max-width: calc(25% - 20px); /* Максимальна ширина для кожної картки */
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contactDetails {
+    color: #000;
+    width: 100%;
+}
+
+.contactName {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.contactNumber {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.deleteButton {
+    align-self: flex-end; /* Вирівнює кнопку в правому нижньому куті */
+    padding: 5px 10px;
+    background-color: #087bc7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.deleteButton:hover {
+    background-color: #d32f2f;
+}
